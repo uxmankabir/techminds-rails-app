@@ -13,7 +13,7 @@
     </div>
 
     <div class="description">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate v elit esse cillum dolore eu fugiat nulla pariatur.
+      <%= @home.description %>
     </div>
 
     <button>
@@ -21,6 +21,6 @@
       <i class="fa-solid fa-circle-chevron-right icon"></i>
     </button>
 
-    <%= image_tag "Mask group.png", class: 'hero-image', alt: 'Hero Image' %>
+    <%= image_tag url_for(@home.image), class: 'hero-image', alt: 'Hero Image' %>
   </div>
 </section>
