@@ -10,9 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_05_21_001238) do
+ActiveRecord::Schema[7.0].define(version: 2023_05_21_003423) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "abouts", force: :cascade do |t|
+    t.text "description"
+    t.integer "project_completed_count", default: 0
+    t.integer "happy_clients_count", default: 0
+    t.string "title_one"
+    t.string "description_one"
+    t.string "title_two"
+    t.string "description_two"
+    t.string "title_three"
+    t.string "description_three"
+    t.string "title_four"
+    t.string "description_four"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
