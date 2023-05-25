@@ -2,50 +2,19 @@
   <div class="wrapper">
     <h1 class="heading">Our services</h1>
     <div class="description">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
+      <%= @service.description %>
     </div>
 
     <div class="services">
-      <div class="service">
-        <div class="service__icon">
-          <%= image_tag "app-dev-lg.svg", alt: 'App Development' %>
+      <% @service.service_items.each do |service_item| %>
+        <div class="service">
+          <div class="service__icon">
+            <%= image_tag url_for(service_item.icon), alt: service_item.title %>
+          </div>
+          <h2 class="service__title"><%= service_item.title %></h2>
+          <div class="service__description"><%= service_item.description %></div>
         </div>
-        <h2 class="service__title">Mobile app development</h2>
-        <div class="service__description">Lorem ipsum dolor sit amet, consectetur
-          adipiscing incididunt ut labore.</div>
-      </div>
-      <div class="service">
-        <div class="service__icon">
-          <%= image_tag "web-dev-lg.svg", alt: 'Web Development' %>
-        </div>
-        <h2 class="service__title">Web development</h2>
-        <div class="service__description">Lorem ipsum dolor sit amet, consectetur
-          adipiscing incididunt ut labore.</div>
-      </div>
-      <div class="service">
-        <div class="service__icon">
-          <%= image_tag "seo-lg.svg", alt: 'SEO' %>
-        </div>
-        <h2 class="service__title">SEO </h2>
-        <div class="service__description">Lorem ipsum dolor sit amet, consectetur
-          adipiscing incididunt ut labore.</div>
-      </div>
-      <div class="service">
-        <div class="service__icon">
-          <%= image_tag "web-dev-lg.svg", alt: 'Digital Marketing' %>
-        </div>
-        <h2 class="service__title">Digital Marketing </h2>
-        <div class="service__description">Lorem ipsum dolor sit amet, consectetur
-          adipiscing incididunt ut labore.</div>
-      </div>
-      <div class="service">
-        <div class="service__icon">
-          <%= image_tag "graphic-design-lg.svg", alt: 'Graphic Designing' %>
-        </div>
-        <h2 class="service__title">Graphic designing </h2>
-        <div class="service__description">Lorem ipsum dolor sit amet, consectetur
-          adipiscing incididunt ut labore.</div>
-      </div>
+      <% end %>
     </div>
   </div>
 </section>
