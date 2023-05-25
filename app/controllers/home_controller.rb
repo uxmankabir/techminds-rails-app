@@ -5,5 +5,6 @@ class HomeController < ApplicationController
     @service = Service.last
     @portfolio = Portfolio.last
     @team = Team.last
+    @contact = Contact.last
   end
 end
