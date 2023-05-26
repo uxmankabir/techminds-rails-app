@@ -16,6 +16,6 @@ class HomeController < ApplicationController
       subject: params[:subject],
       message: params[:message]
     ).contact.deliver_now
-    render json: { message: 'Your message has delivered successfully!' }, status: :ok
+    redirect_to root_path
   end
 end

@@ -10,7 +10,7 @@
       <p class="description">Give us a call or drop by anytime, we endeavour to answer all enquiries within 24 hours.</p>
 
 
-      <%= form_with(url: contact_path, remote: true) do |form| %>
+      <%= form_with(url: contact_path, method: :get) do |form| %>
         <%= text_field_tag :first_name, nil, placeholder: "First Name" %>
         <%= text_field_tag :last_name, nil, placeholder: "Last Name" %>
         <%= email_field_tag :email, nil, placeholder: "Email Address" %>
