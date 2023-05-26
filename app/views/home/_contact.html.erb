@@ -9,16 +9,16 @@
       <h1 class="heading">Contact us</h1>
       <p class="description">Give us a call or drop by anytime, we endeavour to answer all enquiries within 24 hours.</p>
 
-      <form action="#">
-        <input type="text" placeholder="First Name">
-        <input type="text" placeholder="Last Name">
-        <input type="email" placeholder="Email Address">
-        <input type="text" placeholder="Your Subject">
-        <textarea name="" id=""rows="5" placeholder="How can we help?"></textarea>
-        <button>
-          Send Message
-        </button>
-      </form>
+
+      <%= form_with(url: contact_path, remote: true) do |form| %>
+        <%= text_field_tag :first_name, nil, placeholder: "First Name" %>
+        <%= text_field_tag :last_name, nil, placeholder: "Last Name" %>
+        <%= email_field_tag :email, nil, placeholder: "Email Address" %>
+        <%= text_field_tag :subject, nil, placeholder: "Subject" %>
+        <%= text_area_tag :message, nil, placeholder: "How can we help?", rows: 5 %>
+        <%= form.submit "Send Message" %>
+      <% end %>
+
     </div>
   </div>
 </section>

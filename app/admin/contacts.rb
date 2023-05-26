@@ -13,5 +13,5 @@ ActiveAdmin.register Contact do
   #   permitted << :other if params[:action] == 'create' && current_user.admin?
   #   permitted
   # end
-  permit_params :location, :email, :phone
+  permit_params :location, :email, :phone, :latitude, :longitude
 end

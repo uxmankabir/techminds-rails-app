@@ -7,4 +7,15 @@ class HomeController < ApplicationController
     @team = Team.last
     @contact = Contact.last
   end
+
+  def contact
+    ContactMailer.with(
+      first_name: params[:first_name],
+      last_name: params[:last_name],
+      email_address: params[:email],
+      subject: params[:subject],
+      message: params[:message]
+    ).contact.deliver_now
+    render json: { message: 'Your message has delivered successfully!' }, status: :ok
+  end
 end

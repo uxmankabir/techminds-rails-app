@@ -16,10 +16,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre&family=Akshar:wght@300;400;500&family=Bakbak+One&display=swap" rel="stylesheet">
 
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
     <%= yield %>
+    <%= yield :map %>
   </body>
 </html>

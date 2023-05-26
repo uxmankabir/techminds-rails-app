@@ -86,6 +86,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_25_011957) do
 
   create_table "contacts", force: :cascade do |t|
     t.string "location"
+    t.string "latitude"
+    t.string "longitude"
     t.string "email"
     t.string "phone"
     t.datetime "created_at", null: false
