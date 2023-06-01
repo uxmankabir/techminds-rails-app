@@ -79,5 +79,5 @@ member.image.attach(
   filename: 'member-1.png'
 )
 
-Contact.create(location: '47 Abdussalam street Maple ON, L6A3A8 Canada', email: 'yourmail@gmail.com',
+Contact.create(location_1: '47 Abdussalam street Maple ON, L6A3A8 Canada', location_2: '101 West End Avenue, New York NY 10023', email: 'yourmail@gmail.com',
                phone: '+00 111 222 3333', latitude: '31.48109041354171', longitude: '74.31495667033114')
