@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_01_020430) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_01_025241) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -121,6 +121,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_01_020430) do
     t.bigint "portfolio_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "hide_demo_link", default: false
     t.index ["portfolio_id"], name: "index_portfolio_items_on_portfolio_id"
   end
 
