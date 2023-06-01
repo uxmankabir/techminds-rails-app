@@ -54,15 +54,21 @@
         </div>
 
         <div class="social-icons">
-          <div class="social-icon">
-            <i class="fa-brands fa-facebook-f"></i>
-          </div>
-          <div class="social-icon">
-            <i class="fa-brands fa-instagram"></i>
-          </div>
-          <div class="social-icon">
-            <i class="fa-brands fa-linkedin-in"></i>
-          </div>
+          <%= link_to @contact.facebook_url do %>
+            <div class="social-icon">
+              <i class="fa-brands fa-facebook-f"></i>
+            </div>
+          <% end %>
+          <%= link_to @contact.instagram_url do %>
+            <div class="social-icon">
+              <i class="fa-brands fa-instagram"></i>
+            </div>
+          <% end %>
+          <%= link_to @contact.linkedin_url do %>
+            <div class="social-icon">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </div>
+          <% end %>
         </div>
       </div>
     </div>

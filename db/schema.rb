@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_01_014933) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_01_020430) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -93,6 +93,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_01_014933) do
     t.datetime "updated_at", null: false
     t.string "location_1"
     t.string "location_2"
+    t.string "facebook_url"
+    t.string "instagram_url"
+    t.string "linkedin_url"
   end
 
   create_table "homes", force: :cascade do |t|
